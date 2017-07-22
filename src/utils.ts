@@ -22,7 +22,7 @@ var browserFromUA = function(ua) {
     return result
 };
 
-let browser = browserFromUA(navigator.userAgent);
+let browser = browserFromUA(typeof navigator === 'object' ? navigator.userAgent : '');
 
 function compareVersions(a, b) {
     var i, diff;
